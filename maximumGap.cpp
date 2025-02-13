@@ -30,17 +30,17 @@ void maxGap(int size, int* nums)
 
 int main()
 {
-    std::srand(std::time(0));
-    int n = 10000;
-    int nums [n] ;
+    // std::srand(std::time(0));
+    // int n = 10000;
+    int nums [] = {3,6,9,1};
+    // int nums [n] ;
     int size = sizeof(nums) / sizeof(nums[0]);
 
-    for (size_t i = 0; i < n; i++) 
-    {
-        nums[i] = rand() % 1000000000; 
-    }
+    // for (size_t i = 0; i < n; i++) 
+    // {
+    //     nums[i] = rand() % 1000000000; 
+    // }
 
-    //int nums [] = {3,6,9,1};
 
     std::sort(nums, nums+size);
 
