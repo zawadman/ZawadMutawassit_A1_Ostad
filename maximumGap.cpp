@@ -28,19 +28,22 @@ void maxGap(int size, int* nums)
     std::cout << maxDef << "\n";
 }
 
+void populateArray(int* nums, int n)
+{
+    for (size_t i = 0; i < n; i++) 
+    {
+        nums[i] = rand() % 1000000000; 
+    }
+}
+
 int main()
 {
     // std::srand(std::time(0));
-    // int n = 10000;
-    int nums [] = {3,6,9,1};
-    // int nums [n] ;
+    int n = 10000;
+    //int nums [] = {3,6,9,1};//// COMMENT THIS AND UNCOMMENT THE RANDOM NUMBER POPULATION FUNCTION
+    int nums [n] ;//// COMMENT THIS TO POPULATE ARRAY WITH DESCRETE RANDOM VALUES
+    populateArray(nums,n);///// COMMENT THIS TO POPULATE ARRAY WITH DESCRETE RANDOM VALUES
     int size = sizeof(nums) / sizeof(nums[0]);
-
-    // for (size_t i = 0; i < n; i++) 
-    // {
-    //     nums[i] = rand() % 1000000000; 
-    // }
-
 
     std::sort(nums, nums+size);
 
@@ -56,3 +59,5 @@ int main()
     std::cout << "Execution time: " << duration.count() << " ms\n";
     return 0;
 }
+
+///By Zawad Ul Mutawassit
